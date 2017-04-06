@@ -1,0 +1,102 @@
+<html ng-app="appBlog">
+<head>
+	<title>Gestion Usuarios y Comentarios</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">-->
+    <link rel="stylesheet" type="text/css" href="css/angular-toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">   
+                <a class="brand" href="#">User and Posts</a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li><a href="#/User/List">Users</a></li>
+                        <li><a href="#/Post/List">Post</a></li>
+                        <li><a href="#/Albums/List">Albums</a></li>
+                        <li><a href="#/Comments/List">Comments</a></li>
+                        <li><a href="#/Photos/List">Photos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row-fluid">                
+            <div class="span3">
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Users</li>
+                        <li><a href="#/User/Create">Create Users</a></li>
+                        <li><a href="#/User/List">List Users</a></li>
+                    </ul>
+                </div>
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Post</li>
+                        <li><a href="#/Post/Create">Create Post</a></li>
+                        <li><a href="#/Post/List">List Post</a></li>
+                    </ul>
+                </div>
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Albums</li>
+                        <li><a href="#/Albums/Create">Create Albums</a></li>
+                        <li><a href="#/Albums/List">List Albums</a></li>
+                    </ul>
+                </div>
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Comments</li>
+                        <li><a href="#/Comments/Create">Create Comments</a></li>
+                        <li><a href="#/Comments/List">List Comments</a></li>
+                    </ul>
+                </div>
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Photos</li>
+                        <li><a href="#/Photos/Create">Create Photos</a></li>
+                        <li><a href="#/Photos/List">List Photos</a></li>
+                    </ul>
+                </div>
+            </div>
+
+   
+            <div ng-view class="span9">
+
+            </div>
+        </div>
+
+        <hr>
+        <footer>
+            <p>© Company 2012</p>
+        </footer>            
+    </div>
+    <script type="text/javascript" src="lib/underscore-min.js"></script>
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular-route.min.js"></script>
+    <script type="text/javascript" src="lib/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/angular-toastr.tpls.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/services/WebApiConfig.js"></script>
+    <script type="text/javascript" src="js/controllers/CreateUserController.js"></script>
+    <script type="text/javascript" src="js/controllers/ListUserController.js"></script>
+    <script type="text/javascript" src="js/controllers/CreatePostController.js"></script>
+    <script type="text/javascript" src="js/controllers/ListPostController.js"></script>
+    <script type="text/javascript" src="js/controllers/CreateCommentsController.js"></script>
+    <script type="text/javascript" src="js/controllers/ListCommentsController.js"></script>
+    <script type="text/javascript" src="js/controllers/CreateAlbumsController.js"></script>
+    <script type="text/javascript" src="js/controllers/ListAlbumsController.js"></script>
+    <script type="text/javascript" src="js/controllers/CreatePhotosController.js"></script>
+    <script type="text/javascript" src="js/controllers/ListPhotosController.js"></script>
+    <script type="text/javascript" src="js/services/UserResource.js"></script>
+    <script type="text/javascript" src="js/services/PostResource.js"></script>
+    <script type="text/javascript" src="js/services/CommentResource.js"></script>
+    <script type="text/javascript" src="js/services/AlbumResource.js"></script>
+    <script type="text/javascript" src="js/services/PhotosResource.js"></script>
+</body>
+</html>

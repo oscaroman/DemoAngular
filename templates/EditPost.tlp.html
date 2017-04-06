@@ -1,0 +1,31 @@
+<form class="producto form-horizontal" name="createPostForm">
+    <fieldset>
+        <div class="control-group">
+            <label class="control-label">User</label>
+            <div class="controls">
+                <select class="input-xlarge" ng-model="post.userId">
+                    <option ng-repeat="user in users" value="{{user.id}}">
+                        {{user.username}}
+                    </option>
+                </select>
+            </div>
+        </div>  
+        <div class="control-group">
+            <label class="control-label">Tittle</label>
+            <div class="controls">
+                <input required name="postTitle" ng-model="post.titles" class="input-xlarge" type="text" placeholder="Tittle">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Body</label>
+            <div class="controls">
+                <!--<input class="input-xlarge" type="text" placeholder="Message">-->
+                <textarea required name="postBody" ng-model="post.body" class="input-xlarge" rows="4" cols="50" placeholder="Message"></textarea>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="submit" ng-click="savePost()" ng-disabled="createPostForm.$invalid" class="btn btn-primary">Save</button>
+            <button type="reset" class="btn">Cleaner</button>
+        </div>
+    </fieldset>
+</form>

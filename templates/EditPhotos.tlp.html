@@ -1,0 +1,36 @@
+                <form class="producto form-horizontal" name="CratePhotoForm">
+                    <fieldset>
+                        <div class="control-group">
+                            <label class="control-label">Album</label>
+                            <div class="controls">
+                                <select class="input-xlarge" ng-model="photo.albumId">
+                                    <option ng-repeat="album in albums" value="{{album.id}}">
+                                        {{album.title}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>  
+                        <div class="control-group">
+                            <label class="control-label">Tittle</label>
+                            <div class="controls">
+                                <input required name="photoTitle" ng-model="photo.title" class="input-xlarge" type="text" placeholder="Tittle">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">URL:</label>
+                            <div class="controls">
+                                <input required name="photoUrl" ng-model="photo.url" class="input-xlarge" type="text" placeholder="url">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Thumbnail</label>
+                            <div class="controls">
+                                <input class="input-xlarge" type="text" placeholder="thumbnail" required name="photoThumbnail" ng-model="photo.thumbnailUrl">
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" ng-click="savePhoto()" ng-disabled="CratePhotoForm.$invalid" class="btn btn-primary">Save</button>
+                            <button type="reset" class="btn">Cleaner</button>
+                        </div>
+                    </fieldset>
+                </form>

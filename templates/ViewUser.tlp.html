@@ -1,0 +1,44 @@
+<form class="producto form-horizontal" name="CreateUserForm">
+    <fieldset>
+        <div class="control-group">
+            <label class="control-label">Name</label>
+            <div class="controls">
+                <input required ng-model="user.name" class="input-xlarge" type="text" disabled="disabled" value="{{user.name}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Username</label>
+            <div class="controls">
+                <input required ng-model="user.username" class="input-xlarge" type="text" disabled="disabled" value="{{user.username}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Email</label>
+            <div class="controls">
+                <input required ng-model="user.email" class="input-xlarge" type="text" disabled="disabled" value="{{user.email}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Phone</label>
+            <div class="controls">
+                <input required ng-model="user.phone" class="input-xlarge" type="text" disabled="disabled" value="{{user.phone}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Website</label>
+            <div class="controls">
+                <input required ng-model="user.website" class="input-xlarge" type="text" disabled="disabled" value="{{user.website}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Company</label>
+            <div class="controls">
+                <input required ng-model="user.company" class="input-xlarge" type="text" disabled="disabled" value="{{user.company.name}}">
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="submit" ng-click="saveUser()" ng-disabled="CreateUserForm.$invalid" class="btn btn-primary">Save</button>
+            <button type="reset" class="btn">Cleaner</button>
+        </div> 
+    </fieldset>
+</form>

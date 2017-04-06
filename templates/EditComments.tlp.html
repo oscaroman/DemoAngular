@@ -1,0 +1,37 @@
+<form class="producto form-horizontal" name="createCommentForm">
+                    <fieldset>
+                        <div class="control-group">
+                            <label class="control-label">Post</label>
+                            <div class="controls">
+                                <select class="input-xlarge" ng-model="comment.postId">
+                                    <option ng-repeat="post in posts" value="{{post.id}}">
+                                        {{post.title}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>    
+                        <div class="control-group">
+                            <label class="control-label">User</label>
+                            <div class="controls">
+                                <input required name="commentUser" ng-model="comment.username" class="input-xlarge" type="text" placeholder="user">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Tittle</label>
+                            <div class="controls">
+                                <input required name="commentTitle" ng-model="comment.title" class="input-xlarge" type="text" placeholder="Tittle">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Body</label>
+                            <div class="controls">
+                                <!--<input class="input-xlarge" type="text" placeholder="Message">-->
+                                <textarea required name="commentBody" ng-model="comment.body" class="input-xlarge" rows="4" cols="50" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" ng-click="saveComment()" ng-disabled="createCommentForm.$invalid" class="btn btn-primary">Save</button>
+                            <button type="reset" class="btn">Cleaner</button>
+                        </div>
+                    </fieldset>
+                </form>

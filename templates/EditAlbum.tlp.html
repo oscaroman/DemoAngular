@@ -1,0 +1,24 @@
+<form class="producto form-horizontal" name="createAlbumForm">
+                    <fieldset>
+                        <div class="control-group">
+                            <label class="control-label">User</label>
+                            <div class="controls">
+                                <select class="input-xlarge" ng-model="album.userId">
+                                    <option ng-repeat="user in users" value="{{user.id}}">
+                                        {{user.username}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>  
+                        <div class="control-group">
+                            <label class="control-label">Tittle</label>
+                            <div class="controls">
+                                <input required name="albumTitle" ng-model="album.title" class="input-xlarge" type="text" placeholder="Tittle">
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" ng-click="saveAlbum()" ng-disabled="createAlbumForm.$invalid" class="btn btn-primary">Save</button>
+                            <button type="reset" class="btn">Cleaner</button>
+                        </div>
+                    </fieldset>
+                </form>

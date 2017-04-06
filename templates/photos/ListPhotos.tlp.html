@@ -1,0 +1,31 @@
+<div class="page-header">
+                    <h1>List Photos</h1>
+                </div>
+
+                <input type="text" class="form-control" ng-model="searchText" placeholder="Type here for search">
+
+                <table class="table table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th>AlbumID</th>
+                            <th>ID</th>
+                            <th>Tittle</th>
+                            <th>URL</th>
+                            <th>Thumbnail</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="photo in photos | filter:searchText">
+                            <td>{{photo.albumId}}</td>
+                            <td>{{photo.id}}</td>
+                            <td>{{photo.title}}</td>
+                            <td>{{photo.url}}<!--<a ng-href="photo.url"></a>--></td>
+                            <td>{{photo.thumbnailUrl}}<!--<img ng-src="photo.thumbnailUrl">--></td>
+                            <td>
+                                <a href="" ng-click="showEditPhotos(photo)">Editar</a>
+                            </td>
+                        </tr>      
+                    </tbody>
+                </table>
+                <p class="table-result-count">Se han encontrado {{photos.length}} resultado(s).</p>
